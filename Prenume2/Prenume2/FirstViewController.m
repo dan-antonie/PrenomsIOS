@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [Utils loadEverything];
     
     self.unArrayDePrenume = [NSMutableArray array];
 //    [_unArrayDePrenume addObject:@"ion"];
