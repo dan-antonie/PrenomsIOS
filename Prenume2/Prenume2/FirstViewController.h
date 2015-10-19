@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Persoana.h"
-@interface FirstViewController : UIViewController<UITextFieldDelegate,UISearchControllerDelegate,UITableViewDelegate>{
+@interface FirstViewController : UIViewController<UITextFieldDelegate,UISearchControllerDelegate,UITableViewDelegate, UITableViewDataSource, UISearchDisplayDelegate>{
     UITextView *textView;
     
 }

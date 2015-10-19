@@ -110,8 +110,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (NSInteger)tableView:(UITableView *)SearchBar numberOfRowsInSection:(NSInteger)section
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        return [self.arrayDeSearch count];
+    }
+    return 0;
+    
+    
     return self.unArrayDePrenume.count;
    // return 4;
 }
@@ -134,10 +140,25 @@
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController
 {
     
-    NSString *stringDeCautat = searchController.searchBar.text;
+   
+}
+
+
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    NSLog(@"Called");
+    [self cautaPtText:controller.searchBar.text];
+    return YES;
+}
+
+
+- (void) cautaPtText:(NSString *)theText
+{
+    NSString *stringDeCautat = theText;
     if (self.arrayDeSearch) {
         [self.arrayDeSearch removeAllObjects];
-
+        
     }else
     {
         self.arrayDeSearch = [[NSMutableArray alloc] init];
@@ -150,6 +171,8 @@
         }
     }
 }
+
+
 
 
 
