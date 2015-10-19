@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A67349201BD02F100005250B /* Persoana.m in Sources */ = {isa = PBXBuildFile; fileRef = A673491F1BD02F100005250B /* Persoana.m */; };
+		A67349231BD2A9EB0005250B /* TabelPrenumeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A67349221BD2A9EB0005250B /* TabelPrenumeTableViewController.m */; };
+		A67349261BD3A2960005250B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A67349251BD3A2960005250B /* DetailViewController.m */; };
 		A6E13EC41BCBF303004ED608 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E13EC31BCBF303004ED608 /* main.m */; };
 		A6E13EC71BCBF303004ED608 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E13EC61BCBF303004ED608 /* AppDelegate.m */; };
 		A6E13ECA1BCBF303004ED608 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E13EC91BCBF303004ED608 /* FirstViewController.m */; };
@@ -15,7 +18,6 @@
 		A6E13ED21BCBF303004ED608 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6E13ED11BCBF303004ED608 /* Images.xcassets */; };
 		A6E13ED51BCBF303004ED608 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6E13ED31BCBF303004ED608 /* LaunchScreen.xib */; };
 		A6E13EE11BCBF304004ED608 /* Prenume2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E13EE01BCBF304004ED608 /* Prenume2Tests.m */; };
-		A6E13EEC1BCD03BE004ED608 /* SearchBarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E13EEB1BCD03BE004ED608 /* SearchBarTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A673491E1BD02F100005250B /* Persoana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Persoana.h; sourceTree = "<group>"; };
+		A673491F1BD02F100005250B /* Persoana.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Persoana.m; sourceTree = "<group>"; };
+		A67349211BD2A9EB0005250B /* TabelPrenumeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabelPrenumeTableViewController.h; sourceTree = "<group>"; };
+		A67349221BD2A9EB0005250B /* TabelPrenumeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabelPrenumeTableViewController.m; sourceTree = "<group>"; };
+		A67349241BD3A2960005250B /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		A67349251BD3A2960005250B /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		A6E13EBE1BCBF303004ED608 /* Prenume2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prenume2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6E13EC21BCBF303004ED608 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6E13EC31BCBF303004ED608 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -44,8 +52,6 @@
 		A6E13EDA1BCBF304004ED608 /* Prenume2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Prenume2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6E13EDF1BCBF304004ED608 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6E13EE01BCBF304004ED608 /* Prenume2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Prenume2Tests.m; sourceTree = "<group>"; };
-		A6E13EEA1BCD03BE004ED608 /* SearchBarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchBarTableViewController.h; sourceTree = "<group>"; };
-		A6E13EEB1BCD03BE004ED608 /* SearchBarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchBarTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,10 +95,14 @@
 			children = (
 				A6E13EC51BCBF303004ED608 /* AppDelegate.h */,
 				A6E13EC61BCBF303004ED608 /* AppDelegate.m */,
+				A673491E1BD02F100005250B /* Persoana.h */,
+				A673491F1BD02F100005250B /* Persoana.m */,
 				A6E13EC81BCBF303004ED608 /* FirstViewController.h */,
 				A6E13EC91BCBF303004ED608 /* FirstViewController.m */,
-				A6E13EEA1BCD03BE004ED608 /* SearchBarTableViewController.h */,
-				A6E13EEB1BCD03BE004ED608 /* SearchBarTableViewController.m */,
+				A67349241BD3A2960005250B /* DetailViewController.h */,
+				A67349251BD3A2960005250B /* DetailViewController.m */,
+				A67349211BD2A9EB0005250B /* TabelPrenumeTableViewController.h */,
+				A67349221BD2A9EB0005250B /* TabelPrenumeTableViewController.m */,
 				A6E13ECB1BCBF303004ED608 /* SecondViewController.h */,
 				A6E13ECC1BCBF303004ED608 /* SecondViewController.m */,
 				A6E13ECE1BCBF303004ED608 /* Main.storyboard */,
@@ -229,11 +239,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6E13EEC1BCD03BE004ED608 /* SearchBarTableViewController.m in Sources */,
 				A6E13ECD1BCBF303004ED608 /* SecondViewController.m in Sources */,
+				A67349201BD02F100005250B /* Persoana.m in Sources */,
 				A6E13EC71BCBF303004ED608 /* AppDelegate.m in Sources */,
+				A67349231BD2A9EB0005250B /* TabelPrenumeTableViewController.m in Sources */,
 				A6E13ECA1BCBF303004ED608 /* FirstViewController.m in Sources */,
 				A6E13EC41BCBF303004ED608 /* main.m in Sources */,
+				A67349261BD3A2960005250B /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +442,7 @@
 				A6E13EE61BCBF304004ED608 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A6E13EE71BCBF304004ED608 /* Build configuration list for PBXNativeTarget "Prenume2Tests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +451,7 @@
 				A6E13EE91BCBF304004ED608 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

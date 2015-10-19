@@ -1,22 +1,46 @@
 //
-//  SearchBarTableViewController.m
+//  TabelPrenumeTableViewController.m
 //  Prenume2
 //
-//  Created by Horatiu on 13/10/15.
+//  Created by Horatiu on 17/10/15.
 //  Copyright (c) 2015 Horatiu. All rights reserved.
 //
+#import "Persoana.h"
+#import "TabelPrenumeTableViewController.h"
 
-#import "SearchBarTableViewController.h"
-
-@interface SearchBarTableViewController ()
-
+@interface TabelPrenumeTableViewController ()
+@property NSMutableArray *arrayDePersoane;
+@property (weak, nonatomic) IBOutlet UILabel *LabelPrenume;
+@property Persoana *patraspersoana;
 @end
 
-@implementation SearchBarTableViewController
+@implementation TabelPrenumeTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    Persoana *primaPersoana = [[Persoana alloc]init];
+    primaPersoana.prenume = @"Ion";
+    primaPersoana.religie = @"Crestin";
+    primaPersoana.vechime = 900;
+    primaPersoana.calitati = @"Fire onesta.Principala calitate este cinstea";
+    primaPersoana.origine = @"latina";
     
+    Persoana *a2aPersoana = [[Persoana alloc]init];
+    a2aPersoana.prenume = @"Gheorge";
+    a2aPersoana.religie = @"Crestin";
+    a2aPersoana.vechime = 800;
+    a2aPersoana.calitati = @"Om vesel.Principala calitate este simtul umorului";
+    a2aPersoana.origine = @"latina";
+    
+    Persoana *a3aPersoana = [[Persoana alloc]init];
+    a3aPersoana.prenume = @"Marin";
+    
+    Persoana *a4aPersoana = [[Persoana alloc]init];
+    a4aPersoana.prenume = @"Oleg";
+    
+    
+    
+    self.arrayDePersoane=[NSMutableArray arrayWithObjects:primaPersoana.prenume,a2aPersoana.prenume,a3aPersoana.prenume,a4aPersoana.prenume,nil];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -34,24 +58,24 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.arrayDePersoane count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CelulaPrenume" forIndexPath:indexPath];
     
-    // Configure the cell...
+    cell.textLabel.text= self.arrayDePersoane[indexPath.row];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -87,14 +111,30 @@
 }
 */
 
-/*
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.patraspersoana = [self.arrayDePersoane objectAtIndex:indexPath.row];
+    self.LabelPrenume = self.patraspersoana.prenume;
+    [self performSegueWithIdentifier:@"Seguepatras" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    UIViewController *vcToPushTo = segue.destinationViewController;
+   // vcToPushTo.title = self.patraspersoana.prenume;
+
+}
+
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
+// - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ //   [segue destinationViewController];
     // Pass the selected object to the new view controller.
-}
-*/
+// }
+
 
 @end

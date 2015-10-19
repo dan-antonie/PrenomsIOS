@@ -14,20 +14,34 @@
 - (IBAction)finishEditing:(id)sender;
 @property (weak, nonatomic) IBOutlet UISearchBar *SearchBar;
 
+
+@property (nonatomic, strong) NSMutableArray *arrayDeSearch;
 @end
 
 @implementation FirstViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.unArrayDePrenume=(@"Ion",@"Marin",@"Marian",@"Madalin");
+    
+    self.unArrayDePrenume = [NSMutableArray array];
+//    [_unArrayDePrenume addObject:@"ion"];
+//    [_unArrayDePrenume addObject:@"marin"];
+//    [_unArrayDePrenume addObject:@"marin2"];
+    
+    self.unArrayDePrenume= [NSMutableArray arrayWithObjects:@"Ion", @"Maria", @"Marin", @"George", nil];
     
     //  UIDatePicker *datePicker = [[UIDatePicker alloc]init];
   //  [datePicker setDate:[NSDate date]];
   //  [datePicker addTarget:self action:@selector(updateTextField:) forControlEvents:UIControlEventValueChanged];
  //   [self.myTextUiView setInputView:datePicker];
+    NSString *oPersoane =[[NSString alloc ]init];
+    oPersoane= [[NSUserDefaults standardUserDefaults] objectForKey:@"persoana"];
+    NSLog(@"sdadsa %@", oPersoane);
+    Persoana *oPersoana = [[Persoana alloc]init];
+    oPersoana.prenume = @"persoana";
+    [[NSUserDefaults standardUserDefaults] setObject:oPersoana.prenume forKey:@"persoana"];
+    [[NSUserDefaults standardUserDefaults] synchronize ] ;
     
-  
     // Do any additional setup after loading the view, typically from a nib.
 
 }
@@ -112,9 +126,31 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"dummmy"];
+    cell.textLabel.text = [self.arrayDeSearch objectAtIndex:indexPath.row];
     return cell;
 }
+
+#pragma mark - Search delegate
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController
+{
+    
+    NSString *stringDeCautat = searchController.searchBar.text;
+    if (self.arrayDeSearch) {
+        [self.arrayDeSearch removeAllObjects];
+
+    }else
+    {
+        self.arrayDeSearch = [[NSMutableArray alloc] init];
+    }
+    
+    for (int i = 0; i < [self.unArrayDePrenume count]; i++) {
+        NSString *unPrenume = [self.unArrayDePrenume objectAtIndex:i];
+        if ([unPrenume rangeOfString:stringDeCautat].length > 0) {
+            [self.arrayDeSearch addObject:unPrenume];
+        }
+    }
+}
+
 
 
 @end
