@@ -18,7 +18,8 @@
 - (NSManagedObjectContext *)getCoreDataMainContext;
 - (void) initCoreData;
 
-- (void)adaugToatePersoaneleInBazaDeDate;
+- (void)adaugToatePersoaneleInBazaDeDate; //o sa o refac
+- (void)salvareBazaDeDate;
 
 
 

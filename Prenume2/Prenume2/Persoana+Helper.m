@@ -10,4 +10,22 @@
 
 @implementation Persoana (Helper)
 
++ (void)insertOrUpdateCoreDataObject:(id<CoreDataObjectWriter>)coreDataObject forDictionary:(NSDictionary*)dictionarDeTransformatInObiect inContext:(NSManagedObjectContext *)managedObjectContext
+{
+    Persoana *coreDataPers = nil;
+    
+    if (coreDataObject) {
+        
+        //daca obiectul exista deja, il folosesc, adica ii updates proprietatile
+        coreDataPers = (Persoana *)coreDataObject;
+    } else {
+        //daca nu exista, il creez (cazul de baza)
+        coreDataPers = [NSEntityDescription insertNewObjectForEntityForName:@"Persoana" inManagedObjectContext:managedObjectContext];
+    }
+    
+    //setez proprietatile obiectului
+    coreDataPers.idPrenume = [dictionarDeTransformatInObiect valueForKey:@"idPrenume"];
+
+}
+
 @end

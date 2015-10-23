@@ -82,9 +82,38 @@
 }
 
 
+- (void)salvareBazaDeDate
+{
+    NSManagedObjectContext *mocMain = _managedObjectContextMainQueue;
+    NSManagedObjectContext *private = _managedObjectContextBackgroundQueue;
+
+    
+    if (!mocMain) return;
+    if ([mocMain hasChanges]) {
+        [mocMain performBlockAndWait:^{
+            NSError *error = nil;
+            [mocMain save:&error];
+        }];
+    }
+    
+    void (^savePrivate) (void) = ^{
+        NSError *error2 = nil;
+        [private save:&error2];
+    };
+    if ([private hasChanges]) {
+        [private performBlockAndWait:savePrivate];
+    }
+ 
+}
+
+
 - (void)adaugToatePersoaneleInBazaDeDate
 {
     //o sa scriu eu functia asta mai incolo
+    
+    
+    
+    [self salvareBazaDeDate];
 }
 
 

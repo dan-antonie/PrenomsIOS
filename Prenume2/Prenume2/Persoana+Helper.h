@@ -7,7 +7,8 @@
 //
 
 #import "Persoana.h"
+#import "CoreDataObjectWriter.h"
 
-@interface Persoana (Helper)
+@interface Persoana (Helper)<CoreDataObjectWriter>
 
 @end
