@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ControllerCuFRCCuTabel.h"
 
-@interface SecondViewController : UIViewController
+
+@interface SecondViewController : ControllerCuFRCCuTabel
 
 
 @end

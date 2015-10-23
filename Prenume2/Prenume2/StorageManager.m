@@ -7,7 +7,9 @@
 //
 
 #import "StorageManager.h"
-
+#import "SQLHelper.h"
+#import "Persoana+Helper.h"
+#import "Zodiac+Helper.h"
 
 
 @interface StorageManager ()
@@ -111,7 +113,21 @@
 {
     //o sa scriu eu functia asta mai incolo
     
+   // NSString *databasePath = [[NSBundle mainBundle] pathForResource:@"prenom" ofType:@"sqlite"];
+
+    NSString *databasePath = @"/Users/horatiu/prenom.sqlite";
     
+    SQLHelper *db = [[SQLHelper alloc] initWithContentsOfFile:databasePath]; // specify full file path
+    
+    // repeat these 3 steps for every table
+    NSArray *allContents = [db executeQuery:@"SELECT * FROM Prenom"];
+    
+    
+    for (int i = 0; i < [allContents count]; i++) {
+        NSDictionary *aDic = [allContents objectAtIndex:i];
+        [Persoana insertOrUpdateCoreDataObject:nil forDictionary:aDic inContext:_managedObjectContextMainQueue];
+        
+    }
     
     [self salvareBazaDeDate];
 }

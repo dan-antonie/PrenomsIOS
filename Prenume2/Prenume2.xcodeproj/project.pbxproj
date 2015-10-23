@@ -27,6 +27,7 @@
 		A6E6A2F91BDABAD000AA49B6 /* Persoana.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E6A2F81BDABAD000AA49B6 /* Persoana.m */; };
 		A6E6A2FC1BDABB0D00AA49B6 /* Persoana+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E6A2FB1BDABB0D00AA49B6 /* Persoana+Helper.m */; };
 		A6E6A2FF1BDABB2800AA49B6 /* Zodiac+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E6A2FE1BDABB2800AA49B6 /* Zodiac+Helper.m */; };
+		A6E6A3021BDAC31100AA49B6 /* SQLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E6A3011BDAC31100AA49B6 /* SQLHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		A6E6A2FB1BDABB0D00AA49B6 /* Persoana+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Persoana+Helper.m"; sourceTree = "<group>"; };
 		A6E6A2FD1BDABB2800AA49B6 /* Zodiac+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Zodiac+Helper.h"; sourceTree = "<group>"; };
 		A6E6A2FE1BDABB2800AA49B6 /* Zodiac+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Zodiac+Helper.m"; sourceTree = "<group>"; };
+		A6E6A3001BDAC31100AA49B6 /* SQLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLHelper.h; sourceTree = "<group>"; };
+		A6E6A3011BDAC31100AA49B6 /* SQLHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,8 @@
 				A67349221BD2A9EB0005250B /* TabelPrenumeTableViewController.m */,
 				A6E13ECB1BCBF303004ED608 /* SecondViewController.h */,
 				A6E13ECC1BCBF303004ED608 /* SecondViewController.m */,
+				A6E6A3001BDAC31100AA49B6 /* SQLHelper.h */,
+				A6E6A3011BDAC31100AA49B6 /* SQLHelper.m */,
 				A67349271BD569730005250B /* BazaDate */,
 				A6E13ECE1BCBF303004ED608 /* Main.storyboard */,
 				A6E13ED11BCBF303004ED608 /* Images.xcassets */,
@@ -283,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6E13ECD1BCBF303004ED608 /* SecondViewController.m in Sources */,
+				A6E6A3021BDAC31100AA49B6 /* SQLHelper.m in Sources */,
 				A67349201BD02F100005250B /* PersoanaVeche.m in Sources */,
 				A6E6A2F91BDABAD000AA49B6 /* Persoana.m in Sources */,
 				A6E6A2FC1BDABB0D00AA49B6 /* Persoana+Helper.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "StorageManager.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +19,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    [kStorageManager initCoreData];
+    
+    
+    //    [kStorageManager adaugToatePersoaneleInBazaDeDate];
+
     return YES;
     
     // add fffff     

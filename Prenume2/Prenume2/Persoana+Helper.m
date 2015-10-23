@@ -25,7 +25,12 @@
     
     //setez proprietatile obiectului
     coreDataPers.idPrenume = [dictionarDeTransformatInObiect valueForKey:@"idPrenume"];
-
+    coreDataPers.prenume = [dictionarDeTransformatInObiect valueForKey:@"PR_prenom"];
+    coreDataPers.istorie = [dictionarDeTransformatInObiect valueForKey:@"PR_histoire"];
+    coreDataPers.caracter = [dictionarDeTransformatInObiect valueForKey:@"PR_carractere"];
+    coreDataPers.isCrestin = [[dictionarDeTransformatInObiect valueForKey:@"PR_Chretien"] boolValue];
+    coreDataPers.isMusulman = [[dictionarDeTransformatInObiect valueForKey:@"PR_Musulman"] boolValue];
+    coreDataPers.provenienta = [dictionarDeTransformatInObiect valueForKey:@"PR_provenance"];
 }
 
 @end

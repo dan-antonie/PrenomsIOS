@@ -23,8 +23,11 @@
     self.managedObjectContextMainQueue = [kStorageManager getCoreDataMainContext];
     
     // Do any additional setup after loading the view.
-    [self initializareFRC];
-    [self.tabelulMeu reloadData];
+    if (self.tabelulMeu) {
+        [self initializareFRC];
+        [self.tabelulMeu reloadData];
+    }
+    
 
     
 }
