@@ -5,37 +5,37 @@
 //  Created by Horatiu on 17/10/15.
 //  Copyright (c) 2015 Horatiu. All rights reserved.
 //
-#import "Persoana.h"
+#import "PersoanaVeche.h"
 #import "TabelPrenumeTableViewController.h"
 
 @interface TabelPrenumeTableViewController ()
 @property NSMutableArray *arrayDePersoane;
 @property (weak, nonatomic) IBOutlet UILabel *LabelPrenume;
-@property Persoana *patraspersoana;
+@property PersoanaVeche *patraspersoana;
 @end
 
 @implementation TabelPrenumeTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    Persoana *primaPersoana = [[Persoana alloc]init];
+    PersoanaVeche *primaPersoana = [[PersoanaVeche alloc]init];
     primaPersoana.prenume = @"Ion";
     primaPersoana.religie = @"Crestin";
     primaPersoana.vechime = 900;
     primaPersoana.calitati = @"Fire onesta.Principala calitate este cinstea";
     primaPersoana.origine = @"latina";
     
-    Persoana *a2aPersoana = [[Persoana alloc]init];
+    PersoanaVeche *a2aPersoana = [[PersoanaVeche alloc]init];
     a2aPersoana.prenume = @"Gheorge";
     a2aPersoana.religie = @"Crestin";
     a2aPersoana.vechime = 800;
     a2aPersoana.calitati = @"Om vesel.Principala calitate este simtul umorului";
     a2aPersoana.origine = @"latina";
     
-    Persoana *a3aPersoana = [[Persoana alloc]init];
+    PersoanaVeche *a3aPersoana = [[PersoanaVeche alloc]init];
     a3aPersoana.prenume = @"Marin";
     
-    Persoana *a4aPersoana = [[Persoana alloc]init];
+    PersoanaVeche *a4aPersoana = [[PersoanaVeche alloc]init];
     a4aPersoana.prenume = @"Oleg";
     
     

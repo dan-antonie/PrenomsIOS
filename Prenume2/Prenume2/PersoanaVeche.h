@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Persoana : NSObject<NSCoding>
+@interface PersoanaVeche : NSObject<NSCoding>
 
 @property(nonatomic, strong) NSString *prenume;
 @property (nonatomic, strong) NSString *origine;

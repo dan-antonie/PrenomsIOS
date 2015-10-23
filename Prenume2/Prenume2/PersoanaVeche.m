@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Horatiu. All rights reserved.
 //
 
-#import "Persoana.h"
+#import "PersoanaVeche.h"
 
-@implementation Persoana
+@implementation PersoanaVeche
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
@@ -28,7 +28,7 @@
 }
 +(NSMutableArray*) arrayCuPersoane{
     NSMutableArray *unArray =[[NSMutableArray alloc]init];
-    Persoana *oPersona = [[Persoana alloc]init];
+    PersoanaVeche *oPersona = [[PersoanaVeche alloc]init];
     oPersona.prenume = @"Ion";
     oPersona.sex = @ "M";
     oPersona.calitati = @ "Om bun. Calmul este principala calitate";
@@ -36,7 +36,7 @@
     oPersona.origine = @"Traca";
     oPersona.religie = @"Crestina";
     [unArray addObject:oPersona];
-    Persoana *aPersoana = [[Persoana alloc]init];
+    PersoanaVeche *aPersoana = [[PersoanaVeche alloc]init];
     aPersoana.prenume = @"Marin";
     aPersoana.sex = @"M";
     aPersoana.vechime = 900;

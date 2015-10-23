@@ -22,7 +22,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [Utils loadEverything];
     
     self.unArrayDePrenume = [NSMutableArray array];
 //    [_unArrayDePrenume addObject:@"ion"];
@@ -38,7 +37,7 @@
     NSString *oPersoane =[[NSString alloc ]init];
     oPersoane= [[NSUserDefaults standardUserDefaults] objectForKey:@"persoana"];
     NSLog(@"sdadsa %@", oPersoane);
-    Persoana *oPersoana = [[Persoana alloc]init];
+    PersoanaVeche *oPersoana = [[PersoanaVeche alloc]init];
     oPersoana.prenume = @"persoana";
     [[NSUserDefaults standardUserDefaults] setObject:oPersoana.prenume forKey:@"persoana"];
     [[NSUserDefaults standardUserDefaults] synchronize ] ;

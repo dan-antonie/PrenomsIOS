@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14F27" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Persoana" syncable="YES">
+        <attribute name="caracter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idPrenume" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isCrestin" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isMusulman" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="istorie" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prenume" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="provenienta" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Zodiac" syncable="YES">
+        <attribute name="caracter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="compatibilCu" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idZodiac" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="incompatibilCu" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numeZodiac" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ziuaInceput" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ziuaSfarsit" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Persoana" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Zodiac" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>

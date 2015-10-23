@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Persoana.h"
-#import "Utils.h"
+#import "PersoanaVeche.h"
 @interface FirstViewController : UIViewController<UITextFieldDelegate,UISearchControllerDelegate,UITableViewDelegate, UITableViewDataSource, UISearchDisplayDelegate>{
     UITextView *textView;
     
