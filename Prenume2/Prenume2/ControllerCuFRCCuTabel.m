@@ -8,10 +8,10 @@
 
 #import "ControllerCuFRCCuTabel.h"
 #import "StorageManager.h"
-@interface ControllerCuFRCCuTabel ()<UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate>
+@interface ControllerCuFRCCuTabel ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tabelulMeu; // Vezi ca tabelul tre legat ca outlet din controllerul care il extinde pe controllerul asta.
 
-@property (nonatomic, strong) NSFetchedResultsController    *fetchedResultsController;
+// @property (nonatomic, strong) NSFetchedResultsController    *fetchedResultsController;
 
 @end
 

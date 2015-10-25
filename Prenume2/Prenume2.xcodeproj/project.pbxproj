@@ -28,6 +28,7 @@
 		A6E6A2FC1BDABB0D00AA49B6 /* Persoana+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E6A2FB1BDABB0D00AA49B6 /* Persoana+Helper.m */; };
 		A6E6A2FF1BDABB2800AA49B6 /* Zodiac+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E6A2FE1BDABB2800AA49B6 /* Zodiac+Helper.m */; };
 		A6E6A3021BDAC31100AA49B6 /* SQLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E6A3011BDAC31100AA49B6 /* SQLHelper.m */; };
+		A6E6A3041BDACF8500AA49B6 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = A6E6A3031BDACF8500AA49B6 /* readme.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		A6E6A2FE1BDABB2800AA49B6 /* Zodiac+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Zodiac+Helper.m"; sourceTree = "<group>"; };
 		A6E6A3001BDAC31100AA49B6 /* SQLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLHelper.h; sourceTree = "<group>"; };
 		A6E6A3011BDAC31100AA49B6 /* SQLHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLHelper.m; sourceTree = "<group>"; };
+		A6E6A3031BDACF8500AA49B6 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		A6E13EC01BCBF303004ED608 /* Prenume2 */ = {
 			isa = PBXGroup;
 			children = (
+				A6E6A3031BDACF8500AA49B6 /* readme.txt */,
 				A6E6A2F71BDABAD000AA49B6 /* Persoana.h */,
 				A6E6A2F81BDABAD000AA49B6 /* Persoana.m */,
 				A6E6A2FA1BDABB0D00AA49B6 /* Persoana+Helper.h */,
@@ -266,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6E6A3041BDACF8500AA49B6 /* readme.txt in Resources */,
 				A67349281BD569730005250B /* BazaDate in Resources */,
 				A6E13ED01BCBF303004ED608 /* Main.storyboard in Resources */,
 				A6E13ED51BCBF303004ED608 /* LaunchScreen.xib in Resources */,

@@ -9,13 +9,36 @@
 #import "DetailViewController.h"
 
 @interface DetailViewController ()
+@property (weak, nonatomic) IBOutlet UINavigationItem *labelTitlu;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *selectDisplay;
+@property (weak, nonatomic) IBOutlet UITextView *textViewMeu;
 
 @end
 
 @implementation DetailViewController
 
+- (IBAction)selectareView:(id)sender {
+    UISegmentedControl *segmentedControl = (UISegmentedControl *) sender;
+    NSInteger selectedSegment = segmentedControl.selectedSegmentIndex;
+    
+    if (selectedSegment == 0) {
+        self.textViewMeu.text = self.istorie;
+    }
+    else if(selectedSegment == 1){
+        self.textViewMeu.text = self.provenienta;   }
+    else
+        {
+        self.textViewMeu.text = self.caracter;
+        }
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+ 
+    self.labelTitlu.title = self.titlu;
+    self.textViewMeu.text = self.istorie;
+    
+    
+    
     // Do any additional setup after loading the view.
  //   self.LabelPrenume.text = self.title;
 

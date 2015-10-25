@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "StorageManager.h"
 
-@interface ControllerCuFRCCuTabel : UIViewController
+@interface ControllerCuFRCCuTabel : UIViewController<NSFetchedResultsControllerDelegate>
 /*
  Controllerul asta o sa fie clasa de baza pentru toate controllerele cu tabel pe care le ai.
  Are scrise in el initializarea pt Core Data si functii de update pt FRC.
@@ -16,7 +16,7 @@
  */
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContextMainQueue;
-
+@property (nonatomic, strong) NSFetchedResultsController    *fetchedResultsController;
 //metode care tre implementate in controllerul care extinde controllerul asta
 - (NSString *)entityName;
 - (NSPredicate *)fetchPredicate;

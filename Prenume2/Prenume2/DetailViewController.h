@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *LabelPrenume;
-@property (weak, nonatomic) IBOutlet UINavigationItem *TitluDetaliu;
+@property (nonatomic,strong)NSString *titlu;
+@property (nonatomic,strong)NSString *istorie;
+@property (nonatomic,strong)NSString *caracter;
+@property (nonatomic,strong)NSString *provenienta;
 
 @end
