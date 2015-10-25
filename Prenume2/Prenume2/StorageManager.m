@@ -38,6 +38,13 @@
     return _sharedManager;
 }
 
+- (NSString *)generateUniqueStringForFetchedResultControllerCache
+{
+    NSString *UUID = [[NSUUID UUID] UUIDString];
+    return UUID;
+}
+
+
 
 -(void) initCoreData
 {

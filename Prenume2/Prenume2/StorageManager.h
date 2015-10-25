@@ -20,6 +20,7 @@
 
 - (void)adaugToatePersoaneleInBazaDeDate; //o sa o refac
 - (void)salvareBazaDeDate;
+- (NSString *)generateUniqueStringForFetchedResultControllerCache;
 
 
 

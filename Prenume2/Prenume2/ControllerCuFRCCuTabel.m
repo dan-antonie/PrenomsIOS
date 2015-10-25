@@ -83,7 +83,7 @@
     self.fetchedResultsController  = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                                           managedObjectContext:self.managedObjectContextMainQueue
                                                                             sectionNameKeyPath:[self sectionNameKeyPath]
-                                                                                     cacheName:@"dsacee"];
+                                                                                     cacheName:[kStorageManager generateUniqueStringForFetchedResultControllerCache]];
     self.fetchedResultsController.delegate = self;
     
     NSError *error = nil;

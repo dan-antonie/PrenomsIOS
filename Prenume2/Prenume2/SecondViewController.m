@@ -161,7 +161,7 @@
     self.searchFetchedResultsController  = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                                          managedObjectContext:self.managedObjectContextMainQueue
                                                                            sectionNameKeyPath:[self sectionNameKeyPath]
-                                                                                    cacheName:@"dsfdskfkdkfds"];
+                                                                                    cacheName:[kStorageManager generateUniqueStringForFetchedResultControllerCache]];
     self.searchFetchedResultsController.delegate = self;
     
     NSError *error = nil;
@@ -293,7 +293,14 @@
 }
 
 
-
+- (BOOL)suntInSearchMode
+{
+    if ([self.searchDisplayController  isActive]) {
+        return YES;
+    }
+    return NO;
+    
+}
 
 
 #pragma mark - Navigation
@@ -303,8 +310,23 @@
    
     DetailViewController *vc = [[DetailViewController alloc]init];
     vc = [segue destinationViewController];
-    NSIndexPath *indexPath = [self.tabelulMeu indexPathForSelectedRow];
-    Persoana *persoanaCurenta = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    
+    
+    NSIndexPath *indexPath = nil;
+    NSFetchedResultsController *controllerDecautat = nil;
+
+    if ([self suntInSearchMode]) {
+        indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+        controllerDecautat = self.searchFetchedResultsController;
+    }else
+    {
+        indexPath = [self.tabelulMeu indexPathForSelectedRow];
+        controllerDecautat = self.fetchedResultsController;
+    }
+    
+
+    Persoana *persoanaCurenta = [controllerDecautat objectAtIndexPath:indexPath];
     vc.titlu = persoanaCurenta.prenume;
     vc.istorie = persoanaCurenta.istorie;
     vc.caracter = persoanaCurenta.caracter;
