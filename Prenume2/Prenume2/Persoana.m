@@ -18,5 +18,6 @@
 @dynamic istorie;
 @dynamic prenume;
 @dynamic provenienta;
+@dynamic primaLiteraPtSectiune;
 
 @end

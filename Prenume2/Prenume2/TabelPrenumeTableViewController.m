@@ -115,7 +115,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     self.patraspersoana = [self.arrayDePersoane objectAtIndex:indexPath.row];
-    self.LabelPrenume = self.patraspersoana.prenume;
+    //self.LabelPrenume = self.patraspersoana.prenume;
     [self performSegueWithIdentifier:@"Seguepatras" sender:self];
 }
 

@@ -19,5 +19,6 @@
 @property (nonatomic, retain) NSString * istorie;
 @property (nonatomic, retain) NSString * prenume;
 @property (nonatomic, retain) NSString * provenienta;
+@property (nonatomic, retain) NSString * primaLiteraPtSectiune;
 
 @end

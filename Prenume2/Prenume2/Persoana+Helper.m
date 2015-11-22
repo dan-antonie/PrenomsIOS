@@ -31,6 +31,7 @@
     coreDataPers.isCrestin = [[dictionarDeTransformatInObiect valueForKey:@"PR_Chretien"] boolValue];
     coreDataPers.isMusulman = [[dictionarDeTransformatInObiect valueForKey:@"PR_Musulman"] boolValue];
     coreDataPers.provenienta = [dictionarDeTransformatInObiect valueForKey:@"PR_provenance"];
+    coreDataPers.primaLiteraPtSectiune = [coreDataPers.prenume substringToIndex:1];
 }
 
 @end

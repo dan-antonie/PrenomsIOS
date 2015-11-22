@@ -7,6 +7,7 @@
         <attribute name="isMusulman" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="istorie" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="prenume" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="primaLiteraPtSectiune" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="provenienta" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Zodiac" representedClassName="Zodiac" syncable="YES">
@@ -19,7 +20,7 @@
         <attribute name="ziuaSfarsit" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Persoana" positionX="0" positionY="0" width="128" height="150"/>
+        <element name="Persoana" positionX="0" positionY="0" width="128" height="165"/>
         <element name="Zodiac" positionX="0" positionY="0" width="128" height="150"/>
     </elements>
 </model>

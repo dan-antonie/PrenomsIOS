@@ -22,7 +22,7 @@
     [kStorageManager initCoreData];
     
     
-    //    [kStorageManager adaugToatePersoaneleInBazaDeDate];
+        //[kStorageManager adaugToatePersoaneleInBazaDeDate];
 
     return YES;
     

@@ -336,7 +336,7 @@
                                 <rect key="frame" x="16" y="83" width="382" height="609"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PrenumeCell" textLabel="uf2-lt-Uuc" detailTextLabel="3Gf-zG-2If" style="IBUITableViewCellStyleValue1" id="pYM-nv-S9Z">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PrenumeCell" textLabel="uf2-lt-Uuc" detailTextLabel="3Gf-zG-2If" style="IBUITableViewCellStyleValue1" id="pYM-nv-S9Z">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pYM-nv-S9Z" id="Avw-8n-0ym">
@@ -358,7 +358,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="accessoryView" destination="3Gf-zG-2If" id="IeE-0C-95g"/>
-                                            <segue destination="pKW-nH-HtE" kind="showDetail" identifier="mysegue" id="YEj-RV-XPF"/>
+                                            <segue destination="pKW-nH-HtE" kind="show" identifier="mysegue" id="YEj-RV-XPF"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -413,7 +413,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="684" y="500"/>
+            <point key="canvasLocation" x="515" y="528"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="6Ga-3v-yDg">
@@ -466,6 +466,7 @@
                             <constraint firstItem="B9w-Xw-6dU" firstAttribute="leading" secondItem="RUJ-3x-NbD" secondAttribute="leadingMargin" id="ndv-7G-2z9"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="DMk-Yg-BjG"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="labelTitlu" destination="Z7r-n7-Uop" id="OYc-MX-7M3"/>
@@ -475,7 +476,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0iA-b1-Agu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1210" y="500"/>
+            <point key="canvasLocation" x="1253" y="523"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

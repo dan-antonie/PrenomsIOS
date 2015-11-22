@@ -57,7 +57,7 @@
 {
  //   [NSException raise:@"Implementeaza in subclase pe ce cheie vrei sa fie grupate elementele din tabel pe sectiuni" format:@"Daca vrei sa nu fie grupate pe sectiuni, intoarce nil"];
     //aici tre sa intorci numele unei proprietati a entitatii, proprietate dupa care vrei sa se faca gruparea pe sectiuni. Exemplu return @"primaLiteraAPrenumelui"; Proprietatea aia tre sa fie continuta in entitatea respectiva. !!!
-    return @"isMusulman";
+    return @"primaLiteraPtSectiune";
    // return nil;
 }
 
@@ -73,10 +73,11 @@
      NSArray *sortDescriptorsArray = [NSArray arrayWithObjects: sortDupaIdPers, sortDupaAnFabricare, sortDupaNUmar, nil];
      
      return sortDescriptorsArray; */
-   
+    NSSortDescriptor *sortDupaPrimaLitera =  [[NSSortDescriptor alloc] initWithKey:@"primaLiteraPtSectiune" ascending:YES];
+
     NSSortDescriptor *sortDupaIdPers =  [[NSSortDescriptor alloc] initWithKey:@"idPrenume" ascending:YES];
     NSSortDescriptor *sortDupaPrenume = [[NSSortDescriptor alloc] initWithKey:@"prenume" ascending:YES];
-    NSArray *sortDescriptorsArray = [NSArray arrayWithObjects:sortDupaIdPers,sortDupaPrenume, nil];
+    NSArray *sortDescriptorsArray = [NSArray arrayWithObjects:sortDupaPrimaLitera, sortDupaIdPers,sortDupaPrenume, nil];
     return sortDescriptorsArray;
     //return nil;
 }
