@@ -36,7 +36,7 @@
  
     self.labelTitlu.title = self.titlu;
     self.textViewMeu.text = self.istorie;
-    
+    self.title = self.titlu;
     
     
     // Do any additional setup after loading the view.
